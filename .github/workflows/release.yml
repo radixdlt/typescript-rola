@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - develop
+      - release/rcnet-v3
   workflow_dispatch:
 
 jobs:
