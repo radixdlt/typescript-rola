@@ -7,6 +7,11 @@ module.exports = {
       channel: 'alpha',
       prerelease: 'alpha',
     },
+    {
+      name: 'release/rcnet-v3',
+      channel: 'rcnet-v3',
+      prerelease: 'rcnet-v3',
+    },
   ],
   plugins: [
     [
