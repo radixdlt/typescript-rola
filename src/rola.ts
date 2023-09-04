@@ -1,4 +1,4 @@
-import 'isomorphic-fetch'
+import './fetch-polyfill'
 import { ResultAsync, err, errAsync, ok } from 'neverthrow'
 import { createSignatureMessage } from './helpers/create-signature-message'
 import { verifyProofFactory } from './helpers/verify-proof'
