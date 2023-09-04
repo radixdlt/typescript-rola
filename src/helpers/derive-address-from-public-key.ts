@@ -3,16 +3,7 @@ import { PublicKey, RadixEngineToolkit } from '@radixdlt/radix-engine-toolkit'
 import { ResultAsync, errAsync } from 'neverthrow'
 import { typedError } from './typed-error'
 
-const deriveVirtualIdentityAddress = (publicKey: string, networkId: number) =>
-  ResultAsync.fromPromise(
-    RadixEngineToolkit.Derive.virtualIdentityAddressFromPublicKey(
-      new PublicKey.Ed25519(publicKey),
-      networkId,
-    ),
-    typedError,
-  )
-
-const deriveVirtualEddsaEd25519AccountAddress = (
+export const deriveVirtualIdentityAddress = (
   publicKey: string,
   networkId: number,
 ) =>
@@ -24,7 +15,19 @@ const deriveVirtualEddsaEd25519AccountAddress = (
     typedError,
   )
 
-const deriveVirtualEcdsaSecp256k1AccountAddress = (
+export const deriveVirtualEddsaEd25519AccountAddress = (
+  publicKey: string,
+  networkId: number,
+) =>
+  ResultAsync.fromPromise(
+    RadixEngineToolkit.Derive.virtualAccountAddressFromPublicKey(
+      new PublicKey.Ed25519(publicKey),
+      networkId,
+    ),
+    typedError,
+  )
+
+export const deriveVirtualEcdsaSecp256k1AccountAddress = (
   publicKey: string,
   networkId: number,
 ) =>
