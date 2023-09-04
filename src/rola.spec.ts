@@ -44,7 +44,7 @@ describe('Rola', () => {
       },
     ] satisfies SignedChallenge[]) {
       const result = await verifySignedChallenge(proof)
-      if (result.isErr()) throw result.error
+      if (result.isErr()) throw result.error.jsError
     }
   })
 })

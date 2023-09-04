@@ -72,6 +72,7 @@
     "eslint-config-alloy": "^5.1.2",
     "eslint-plugin-unused-imports": "^3.0.0",
     "husky": "^8.0.3",
+    "isomorphic-fetch": "^3.0.0",
     "jest": "^29.6.4",
     "jest-environment-jsdom": "^29.6.4",
     "prettier": "^3.0.3",
@@ -86,8 +87,7 @@
     "@radixdlt/radix-dapp-toolkit": "0.6.1",
     "@radixdlt/radix-engine-toolkit": "0.3.0",
     "elliptic": "^6.5.4",
-    "neverthrow": "^6.0.0",
-    "node-fetch": "^2.7.0"
+    "neverthrow": "^6.0.0"
   },
   "repository": {
     "type": "git",

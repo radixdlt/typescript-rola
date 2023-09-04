@@ -12,11 +12,12 @@ ROLA is intended for use in the server backend portion of a Full Stack dApp. It 
 
 ## Getting started
 
-`npm install @radixdlt/rola`
+`npm install @radixdlt/rola isomorphic-fetch`
 
 ## How to use
 
 ```typescript
+import 'isomorphic-fetch'
 import { Rola, NetworkId, SignedChallenge } from '@radixdlt/rola'
 
 const { verifySignedChallenge } = Rola({

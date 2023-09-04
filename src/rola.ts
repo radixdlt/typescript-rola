@@ -1,4 +1,3 @@
-import './fetch-polyfill'
 import { ResultAsync, err, errAsync, ok } from 'neverthrow'
 import { createSignatureMessage } from './helpers/create-signature-message'
 import { verifyProofFactory } from './helpers/verify-proof'
@@ -57,7 +56,10 @@ export const Rola = (input: RolaInput) => {
     const queryLedger = () =>
       gatewayService
         .getEntityOwnerKeys(signedChallenge.address)
-        .mapErr(() => ({ reason: 'couldNotVerifyPublicKeyOnLedger' }))
+        .mapErr((jsError) => ({
+          reason: 'couldNotVerifyPublicKeyOnLedger',
+          jsError,
+        }))
         .map((ownerKeys) => ({
           ownerKeysMatchesProvidedPublicKey: ownerKeys
             .toUpperCase()
