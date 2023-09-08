@@ -1,6 +1,8 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-# ROLA (Radix Off-Ledger Authentication)
+# [TYPESCRIPT ROLA HAS MOVED](https://github.com/radixdlt/rola/tree/main/typescript)
+
+# [Deprecated]ROLA (Radix Off-Ledger Authentication)
 
 ROLA is a method of authenticating something claimed by the user connected to your dApp with the Radix Wallet. It uses the capabilities of the Radix Network to make this possible in a way that is decentralized and flexible for the user.
 
